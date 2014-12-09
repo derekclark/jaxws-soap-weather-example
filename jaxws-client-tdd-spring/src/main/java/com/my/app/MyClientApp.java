@@ -1,34 +1,21 @@
 package com.my.app;
-import java.util.Arrays;
 
-import net.webservicex.GlobalWeather;
-import net.webservicex.GlobalWeatherSoap;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
-import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.ComponentScan;
-import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Import;
-
-import com.my.ws.WebServiceCall;
-import com.my.ws.WebServiceCallValidator;
 import com.my.ws.WebServiceWrapper;
 import com.my.wsResponse.InvalidCapabilityException;
 import com.my.wsResponse.InvalidNumberOfArgumentsException;
-import com.my.config.BeanConfig;
+import com.my.config.MyBeanConfigurations;
 
-//@Configuration
-//@EnableAutoConfiguration
-//@ComponentScan(basePackages="com.my")
-@Import (BeanConfig.class)
+//this loads in the bean definitions
+@Import (MyBeanConfigurations.class)
 
 public class MyClientApp implements CommandLineRunner{
 
-//	GlobalWeather globalWeather;
 	@Autowired private WebServiceWrapper webServiceWrapper;
 	
 	public static void main(String[] args) throws InvalidCapabilityException{

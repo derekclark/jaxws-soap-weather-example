@@ -13,8 +13,8 @@ import com.my.ws.WebServiceWrapper;
 
 @Configuration
 @EnableAutoConfiguration
-@ComponentScan(basePackages = "com.my")
-public class BeanConfig {
+//@ComponentScan(basePackages = "com.my")
+public class MyBeanConfigurations {
 	@Bean
 	public WebServiceWrapper webServiceWrapper(){
 		return new WebServiceWrapper();
