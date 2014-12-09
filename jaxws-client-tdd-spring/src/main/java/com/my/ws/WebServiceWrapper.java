@@ -4,10 +4,12 @@ import net.webservicex.GlobalWeather;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Component;
 
 import com.my.wsResponse.InvalidCapabilityException;
 import com.my.wsResponse.InvalidNumberOfArgumentsException;
 
+@Component
 public class WebServiceWrapper {
 	private final static String GET_WEATHER= "getWeather";
 	private final static String GET_CITIES_BY_COUNTRY= "getCitiesByCountry";
